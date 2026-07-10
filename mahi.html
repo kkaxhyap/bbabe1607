@@ -239,7 +239,7 @@
         <button class="nav-btn" onclick="switchPage('memory')">📸</button>
     </div>
 
-    <!-- ================= PAGE 1: CORE HUD & TIMED RUNTIME ================= -->
+    <!-- ================= PAGE 1: MAIN ENTRY PORTAL ================= -->
     <div id="page-home" class="page-view active">
         <div class="card">
             <div class="status-badge">STATUS: TUNED IN 🎧</div><br>
@@ -276,7 +276,7 @@
         </div>
     </div>
 
-    <!-- ================= PAGE 2: MOOD REGISTRY MODULE ================= -->
+    <!-- ================= PAGE 2: MOOD TRACKER ================= -->
     <div id="page-mood" class="page-view">
         <div class="card">
             <div class="status-badge">STICKER LOG: ONLINE VIBE 💖</div><br>
@@ -299,7 +299,7 @@
         </div>
     </div>
 
-    <!-- ================= PAGE 3: REASONS TABS ================= -->
+    <!-- ================= PAGE 3: REASONS ARRAY ================= -->
     <div id="page-reasons" class="page-view">
         <div class="card">
             <div class="status-badge">ALERT: SO CUTE FR 🥺</div><br>
@@ -327,7 +327,7 @@
         </div>
     </div>
 
-    <!-- ================= PAGE 4: SCRAPBOOK GALLERY ================= -->
+    <!-- ================= PAGE 4: SCRAPBOOK LANE ================= -->
     <div id="page-memory" class="page-view">
         <div class="card" style="background:#fffdec;">
             <div class="status-badge">SCRAPBOOK ALBUM: PRIVATE 🔒</div><br>
@@ -366,14 +366,14 @@
         </div>
     </div>
 
-    <!-- MICRO-TIMED ROUTINE SCRIPTS ENGINE -->
+    <!-- TRACK OPERATIONS LAYOUT ENGINE -->
     <script>
         let heartInterval = null;
 
-        // AUTOMATED TIMING OFFSET SETUP: Updated to 16.5 seconds delay to sync perfectly
-        const timeOffset = 16.5; 
+        // TIMING OFFSET FIXED: Core audio stream start delay re-aligned
+        const timeOffset = 17.5; 
 
-        // 100% RECALIBRATED MILLISECOND TIMING MAP (Yeh Fitoor Mera Clip)
+        // MICROSEC MANIPULATED MAP FOR VOCAL CHORD PROGRESSION
         const lyricTimings = [
             { time: 0, text: "🎵 music playing... ready for the magic? ✨" },
             { time: 14.5, text: "Zindagi ne ki hai kaisi saazishein... 🌱" },
@@ -385,15 +385,16 @@
             { time: 65.0, text: "Tu hi toh hai tu hi toh hai yaara 💕" },
             { time: 73.2, text: "Tu hi toh hai tu hi toh hai yaara..." },
             { time: 82.0, text: "Parwardigaara, parwardigaara... 🌌" },
-            { time: 99.8, text: "Dheeme dheeme jal rahi thi khwaahishein... 🕯️" },
-            { time: 108.5, text: "Dil mein dabi ghut rahi farmaarishein..." },
-            { time: 116.8, text: "Ban ke dhuaan woh tujh tak jaa pahonchi 🙏" },
-            { time: 125.0, text: "Deewanegi ki hadd maine nochi... ⚡" },
-            { time: 133.5, text: "Yeh fitoor mera laaya mujh ko tu hi ke yaara ❤️" },
-            { time: 142.0, text: "Yeh fitoor mera laaya mujh ko tu hi ke yaara..." },
-            { time: 150.5, text: "Tu hi toh hai tu hi toh hai yaara 🫂" },
-            { time: 159.0, text: "Tu hi toh hai tu hi toh hai yaara..." },
-            { time: 167.5, text: "Parwardigaara, parwardigaara... 🌌" }
+            // Re-synchronized 3 seconds shift exclusively for the second stanza
+            { time: 102.8, text: "Dheeme dheeme jal rahi thi khwaahishein... 🕯️" },
+            { time: 111.5, text: "Dil mein dabi ghut rahi farmaarishein..." },
+            { time: 119.8, text: "Ban ke dhuaan woh tujh tak jaa pahonchi 🙏" },
+            { time: 128.0, text: "Deewanegi ki hadd maine nochi... ⚡" },
+            { time: 136.5, text: "Yeh fitoor mera laaya mujh ko tu hi ke yaara ❤️" },
+            { time: 145.0, text: "Yeh fitoor mera laaya mujh ko tu hi ke yaara..." },
+            { time: 153.5, text: "Tu hi toh hai tu hi toh hai yaara 🫂" },
+            { time: 162.0, text: "Tu hi toh hai tu hi toh hai yaara..." },
+            { time: 170.5, text: "Parwardigaara, parwardigaara... 🌌" }
         ];
 
         function checkImages() {
