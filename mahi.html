@@ -231,7 +231,7 @@
         <button class="mood-btn" style="padding: 6px 14px; font-size: 0.8rem; margin: 8px auto 0; flex: none; display: inline-flex; width: auto; font-weight: bold;" onclick="toggleMusic()">🎵 play music</button>
     </div>
 
-    <!-- PERSISTENT FOOTER APPBARR NAVIGATION -->
+    <!-- MOBILE STICKY BOTTOM NAVBAR -->
     <div class="navbar">
         <button class="nav-btn active" onclick="switchPage('home')">🏠</button>
         <button class="nav-btn" onclick="switchPage('mood')">🐱</button>
@@ -299,7 +299,7 @@
         </div>
     </div>
 
-    <!-- ================= PAGE 3: PERSPECTIVE REASONS MATRIX ================= -->
+    <!-- ================= PAGE 3: REASONS TABS ================= -->
     <div id="page-reasons" class="page-view">
         <div class="card">
             <div class="status-badge">ALERT: SO CUTE FR 🥺</div><br>
@@ -327,7 +327,7 @@
         </div>
     </div>
 
-    <!-- ================= PAGE 4: POLAROID PHOTO RECORDS ================= -->
+    <!-- ================= PAGE 4: SCRAPBOOK GALLERY ================= -->
     <div id="page-memory" class="page-view">
         <div class="card" style="background:#fffdec;">
             <div class="status-badge">SCRAPBOOK ALBUM: PRIVATE 🔒</div><br>
@@ -369,6 +369,9 @@
     <!-- MICRO-TIMED ROUTINE SCRIPTS ENGINE -->
     <script>
         let heartInterval = null;
+
+        // AUTOMATED TIMING OFFSET SETUP: 8 seconds delay added cleanly here
+        const timeOffset = 8.0; 
 
         // 100% RECALIBRATED MILLISECOND TIMING MAP (Yeh Fitoor Mera Clip)
         const lyricTimings = [
@@ -502,7 +505,9 @@
             clearInterval(lyricInterval);
             
             lyricInterval = setInterval(() => {
-                let currentTime = audio.currentTime;
+                // Evaluates current timestamp relative to the 8-second audio offset
+                let currentTime = audio.currentTime - timeOffset;
+                
                 let currentIndex = 0;
                 for (let i = 0; i < lyricTimings.length; i++) {
                     if (currentTime >= lyricTimings[i].time) {
@@ -524,7 +529,7 @@
                         }, 40);
                     }, 160);
                 }
-            }, 50); // Hyper-sensitive 50ms polling loop
+            }, 50); 
         }
     </script>
 </body>
