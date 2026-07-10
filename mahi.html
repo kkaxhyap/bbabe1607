@@ -370,8 +370,8 @@
     <script>
         let heartInterval = null;
 
-        // AUTOMATED TIMING OFFSET SETUP: 8 seconds delay added cleanly here
-        const timeOffset = 8.0; 
+        // UPDATED TIMING OFFSET SETUP: Set to 12.5 seconds to perfectly match the clip intro
+        const timeOffset = 12.5; 
 
         // 100% RECALIBRATED MILLISECOND TIMING MAP (Yeh Fitoor Mera Clip)
         const lyricTimings = [
@@ -505,7 +505,6 @@
             clearInterval(lyricInterval);
             
             lyricInterval = setInterval(() => {
-                // Evaluates current timestamp relative to the 8-second audio offset
                 let currentTime = audio.currentTime - timeOffset;
                 
                 let currentIndex = 0;
