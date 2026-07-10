@@ -239,7 +239,7 @@
         <button class="nav-btn" onclick="switchPage('memory')">📸</button>
     </div>
 
-    <!-- ================= PAGE 1: MAIN ENTRY PORTAL ================= -->
+    <!-- ================= PAGE 1: CORE HUD ================= -->
     <div id="page-home" class="page-view active">
         <div class="card">
             <div class="status-badge">STATUS: TUNED IN 🎧</div><br>
@@ -276,7 +276,7 @@
         </div>
     </div>
 
-    <!-- ================= PAGE 2: MOOD TRACKER ================= -->
+    <!-- ================= PAGE 2: MOOD REGISTRY MODULE ================= -->
     <div id="page-mood" class="page-view">
         <div class="card">
             <div class="status-badge">STICKER LOG: ONLINE VIBE 💖</div><br>
@@ -299,7 +299,7 @@
         </div>
     </div>
 
-    <!-- ================= PAGE 3: REASONS ARRAY ================= -->
+    <!-- ================= PAGE 3: REASONS TABS ================= -->
     <div id="page-reasons" class="page-view">
         <div class="card">
             <div class="status-badge">ALERT: SO CUTE FR 🥺</div><br>
@@ -327,7 +327,7 @@
         </div>
     </div>
 
-    <!-- ================= PAGE 4: SCRAPBOOK LANE ================= -->
+    <!-- ================= PAGE 4: SCRAPBOOK GALLERY ================= -->
     <div id="page-memory" class="page-view">
         <div class="card" style="background:#fffdec;">
             <div class="status-badge">SCRAPBOOK ALBUM: PRIVATE 🔒</div><br>
@@ -366,35 +366,34 @@
         </div>
     </div>
 
-    <!-- TRACK OPERATIONS LAYOUT ENGINE -->
+    <!-- MICRO-TIMED ROUTINE SCRIPTS ENGINE -->
     <script>
         let heartInterval = null;
 
-        // TIMING OFFSET FIXED: Core audio stream start delay re-aligned
-        const timeOffset = 17.5; 
+        // TIMING OFFSET FIXED
+        const timeOffset = 17.0; 
 
-        // MICROSEC MANIPULATED MAP FOR VOCAL CHORD PROGRESSION
+        // TRANSITION MAP (REALS CLIP LYRICS INTEGERS)
         const lyricTimings = [
             { time: 0, text: "🎵 music playing... ready for the magic? ✨" },
-            { time: 14.5, text: "Zindagi ne ki hai kaisi saazishein... 🌱" },
-            { time: 23.0, text: "Poori hui dil ki yeh guzaarishein ✨" },
-            { time: 31.8, text: "Maangi duaaon ka phal hai mila 🙏" },
-            { time: 40.0, text: "Aaye ho tum toh mili hai shifa... ❤️" },
-            { time: 48.0, text: "Yeh fitoor mera laaya mujh ko tu hi ke yaara 🌊" },
-            { time: 56.5, text: "Yeh fitoor mera laaya mujh ko tu hi ke yaara..." },
-            { time: 65.0, text: "Tu hi toh hai tu hi toh hai yaara 💕" },
-            { time: 73.2, text: "Tu hi toh hai tu hi toh hai yaara..." },
-            { time: 82.0, text: "Parwardigaara, parwardigaara... 🌌" },
-            // Re-synchronized 3 seconds shift exclusively for the second stanza
-            { time: 102.8, text: "Dheeme dheeme jal rahi thi khwaahishein... 🕯️" },
-            { time: 111.5, text: "Dil mein dabi ghut rahi farmaarishein..." },
-            { time: 119.8, text: "Ban ke dhuaan woh tujh tak jaa pahonchi 🙏" },
-            { time: 128.0, text: "Deewanegi ki hadd maine nochi... ⚡" },
-            { time: 136.5, text: "Yeh fitoor mera laaya mujh ko tu hi ke yaara ❤️" },
-            { time: 145.0, text: "Yeh fitoor mera laaya mujh ko tu hi ke yaara..." },
-            { time: 153.5, text: "Tu hi toh hai tu hi toh hai yaara 🫂" },
-            { time: 162.0, text: "Tu hi toh hai tu hi toh hai yaara..." },
-            { time: 170.5, text: "Parwardigaara, parwardigaara... 🌌" }
+            { time: 14.5, text: "Zindagi ne ki hain kaisi साजिशें... 🌱" },
+            { time: 23.0, text: "Pouri hui dil ki woh फरमाईशें ✨" },
+            { time: 31.8, text: "Maangi dua ek tujh tak jaa पहुँची 🙏" },
+            { time: 40.0, text: "Kaisi suni tune meri ख़ामोशी... ❤️" },
+            { time: 48.0, text: "Ye फ़िटूर mera laaya mujhko hai tere करीब 🌊" },
+            { time: 56.5, text: "Ye फ़िटूर mera rehmat तेरी..." },
+            { time: 65.0, text: "Ye फ़िटूर mera maine badla re mera नसीब 💕" },
+            { time: 73.2, text: "Ye फ़िटूर mera chaahat तेरी..." },
+            { time: 82.0, text: "O parwar digara parwar दिगारा... 🌌" },
+            { time: 104.3, text: "Dheeme dheeme jal rahi thi ख्वाहishein... 🕯️" },
+            { time: 113.0, text: "Dil mein dabi ghut rahi फरमाईशें..." },
+            { time: 121.3, text: "Ban ke dua woh tujh tak jaa पहुँची 🙏" },
+            { time: 129.5, text: "Deewanegi ki hadd maine नोची... ⚡" },
+            { time: 138.0, text: "Ye फ़िटूर mera laaya mujhko hai tere करीब ❤️" },
+            { time: 146.5, text: "Ye फ़िटूर mera rehmat तेरी..." },
+            { time: 155.0, text: "Ye फ़िटूर mera maine badla re mera नसीब 🫂" },
+            { time: 163.5, text: "Ye फ़िटूर mera chaahat तेरी..." },
+            { time: 172.0, text: "O parwar digara parwar दिगारा... 🌌" }
         ];
 
         function checkImages() {
